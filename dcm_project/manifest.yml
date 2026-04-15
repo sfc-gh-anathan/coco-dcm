@@ -1,0 +1,30 @@
+manifest_version: 2
+type: DCM_PROJECT
+default_target: DEV
+
+targets:
+  DEV:
+    account_identifier: wub54834
+    project_name: DBT_DCM_DEMO.PROJECTS.PAYCHEX_INFRA
+    project_owner: ACCOUNTADMIN
+    templating_config: DEV
+  PROD:
+    account_identifier: wub54834
+    project_name: DBT_DCM_DEMO.PROJECTS.PAYCHEX_INFRA_PROD
+    project_owner: ACCOUNTADMIN
+    templating_config: PROD
+
+templating:
+  defaults:
+    env_suffix: ""
+    wh_size: "XSMALL"
+    data_retention_days: 30
+  configurations:
+    DEV:
+      env_suffix: "_DEV"
+      wh_size: "XSMALL"
+      data_retention_days: 1
+    PROD:
+      env_suffix: "_PROD"
+      wh_size: "MEDIUM"
+      data_retention_days: 90

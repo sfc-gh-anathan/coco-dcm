@@ -1,0 +1,7 @@
+sources:
+  - name: raw
+    database: DBT_DCM_DEMO
+    schema: RAW_DEV
+    tables:
+      - name: clients
+      - name: payroll_runs

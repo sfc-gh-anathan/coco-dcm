@@ -1,0 +1,21 @@
+models:
+  - name: stg_payroll_runs
+    columns:
+      - name: PAYROLL_RUN_ID
+        tests:
+          - not_null
+          - unique
+      - name: STATUS
+        tests:
+          - accepted_values:
+              values: ['PENDING', 'COMPLETED', 'FAILED', 'CANCELLED']
+
+  - name: stg_clients
+    columns:
+      - name: CLIENT_ID
+        tests:
+          - not_null
+          - unique
+      - name: REGION
+        tests:
+          - not_null

@@ -1,0 +1,12 @@
+paychex_payroll:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: wub54834
+      user: ANATHAN
+      role: ACCOUNTADMIN
+      database: DBT_DCM_DEMO
+      warehouse: DAILY_WH_XS
+      schema: STAGING_DEV
+      threads: 4

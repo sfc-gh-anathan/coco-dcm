@@ -1,0 +1,10 @@
+models:
+  - name: fct_payroll_volume_by_region
+    description: "Monthly payroll processing volumes by region and plan type for Paychex clients"
+    columns:
+      - name: REGION
+        tests:
+          - not_null
+      - name: TOTAL_GROSS_PAYROLL
+        tests:
+          - not_null

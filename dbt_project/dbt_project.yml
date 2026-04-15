@@ -1,0 +1,20 @@
+name: paychex_payroll
+version: '1.0.0'
+
+profile: paychex_payroll
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  paychex_payroll:
+    staging:
+      +schema: STAGING_DEV
+    marts:
+      +schema: MARTS_DEV

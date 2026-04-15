@@ -1,0 +1,19 @@
+
+  create or replace   view DBT_DCM_DEMO.STAGING_DEV.stg_clients
+  
+   as (
+    WITH source AS (
+    SELECT * FROM DBT_DCM_DEMO.RAW_DEV.clients
+)
+
+SELECT
+    CLIENT_ID,
+    TRIM(CLIENT_NAME) AS CLIENT_NAME,
+    UPPER(REGION) AS REGION,
+    EMPLOYEE_COUNT,
+    UPPER(PLAN_TYPE) AS PLAN_TYPE,
+    ONBOARDED_AT
+FROM source
+WHERE CLIENT_ID IS NOT NULL
+  );
+
