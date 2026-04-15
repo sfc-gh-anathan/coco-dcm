@@ -5,12 +5,12 @@ default_target: DEV
 targets:
   DEV:
     account_identifier: wub54834
-    project_name: DBT_DCM_DEMO.PROJECTS.PAYCHEX_INFRA
+    project_name: DBT_DCM_DEMO.PROJECTS.CHECKPAY_INFRA
     project_owner: ACCOUNTADMIN
     templating_config: DEV
   PROD:
     account_identifier: wub54834
-    project_name: DBT_DCM_DEMO.PROJECTS.PAYCHEX_INFRA_PROD
+    project_name: DBT_DCM_DEMO.PROJECTS.CHECKPAY_INFRA_PROD
     project_owner: ACCOUNTADMIN
     templating_config: PROD
 

@@ -1,12 +1,12 @@
-# Paychex Payroll Infrastructure (DCM Project)
+# CheckPay Payroll Infrastructure (DCM Project)
 
-Snowflake Database Change Management (DCM) project that provisions and manages the infrastructure for Paychex payroll analytics.
+Snowflake Database Change Management (DCM) project that provisions and manages the infrastructure for CheckPay payroll analytics.
 
 ## What It Manages
 
 - **Schemas**: `RAW`, `STAGING`, `MARTS` (with managed access)
 - **Tables**: `CLIENTS`, `PAYROLL_RUNS` with change tracking enabled
-- **Warehouse**: `PAYCHEX_WH` (sized per environment)
+- **Warehouse**: `CHECKPAY_WH` (sized per environment)
 - **Data Quality**: Data metric functions for null checks, uniqueness, and value constraints
 - **Streams**: CDC streams on `CLIENTS` and `PAYROLL_RUNS` (post-deploy)
 

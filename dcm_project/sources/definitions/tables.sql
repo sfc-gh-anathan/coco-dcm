@@ -7,7 +7,7 @@ DEFINE TABLE DBT_DCM_DEMO.RAW{{ env_suffix }}.CLIENTS (
     ONBOARDED_AT TIMESTAMP_NTZ
 )
 CHANGE_TRACKING = TRUE
-COMMENT = 'Paychex client accounts'
+COMMENT = 'CheckPay client accounts'
 DATA_RETENTION_TIME_IN_DAYS = {{ data_retention_days }};
 
 DEFINE TABLE DBT_DCM_DEMO.RAW{{ env_suffix }}.PAYROLL_RUNS (
@@ -24,5 +24,5 @@ DEFINE TABLE DBT_DCM_DEMO.RAW{{ env_suffix }}.PAYROLL_RUNS (
     PAYMENT_METHOD VARCHAR(50)
 )
 CHANGE_TRACKING = TRUE
-COMMENT = 'Paychex payroll processing runs'
+COMMENT = 'CheckPay payroll processing runs'
 DATA_RETENTION_TIME_IN_DAYS = {{ data_retention_days }};
